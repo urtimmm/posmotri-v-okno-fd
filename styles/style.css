@@ -76,7 +76,6 @@ ol {
   align-items: flex-end;
   gap: 30px;
   width: 1140px;
-  height: 534px;
 }
 
 /* Блок result */
@@ -127,18 +126,12 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
-.search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
-
-.search-form__label:has(.search-form__checkbox:not(:checked)):hover
-.search-form__label-text {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-decoration-thickness: 0.7px;
   text-underline-offset: 2px;
@@ -194,12 +187,12 @@ ol {
 .search-form__submit-button {
   align-self: flex-end;
   width: 194px;
-  min-height: 34px;
 }
 
 /* Кнопки */
 
 .button {
+  min-height: 34px;
   border: 1px solid #fff;
   color: #fff;
   font-family: inherit;
@@ -235,7 +228,6 @@ ol {
   flex-direction: column;
   flex: 1;
   gap: 22px;
-  height: 534px;
 }
 
 .title {
@@ -298,15 +290,13 @@ ol {
   outline: 1px solid #fff;
 }
 
-.content__card-link:not(.content__card-link_current):hover
-.content__video-card-title {
+.content__card-link:hover .content__video-card-title {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
 
-.content__card-link:not(.content__card-link_current):hover
-.content__video-card-description {
+.content__card-link:hover .content__video-card-description {
   text-decoration: underline;
   text-decoration-thickness: 0.7px;
   text-underline-offset: 1px;
@@ -340,8 +330,8 @@ ol {
   font-size: 18px;
   line-height: 16.2px;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
 }
 
 .content__video-card-thumbnail {
@@ -356,5 +346,4 @@ ol {
 
 .more-button {
   width: 100%;
-  min-height: 34px;
 }
